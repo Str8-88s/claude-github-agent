@@ -1,4 +1,4 @@
-# Decisions — Claude-GitHub Agent
+# Decisions — GitHub Agent
 
 Technical decisions made during development. Logged in real time during sessions.
 
@@ -41,3 +41,10 @@ Format:
 **Choice:** Three tools only — `get_repo`, `list_repos`, `get_commits`  
 **Alternatives considered:** Additional tools (issues, pull requests, releases)  
 **Why:** Tight scope produces a finished, defensible artifact. Three tools are enough to demonstrate the full agent loop and tool selection logic. More tools add surface area without adding interview value.
+
+---
+
+**Decision:** Model  
+**Choice:** `claude-sonnet-4-6`  
+**Alternatives considered:** `claude-sonnet-4-20250514` (outdated string)  
+**Why:** Current model string as of June 2026. Older string returned 404 from the API.
